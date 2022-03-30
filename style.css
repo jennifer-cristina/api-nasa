@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Bruno Ace SC';
+    src: url('./fonts/Bruno\ Ace\ SC\ Regular.ttf') format('truetype');
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 500px;
+}
+
+#menu-principal {
+    display: flex;
+    background-image: url(./img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-sobre {
+    width: 60%;
+    height: 700px;
+    margin-top: 80px;
+    margin-left: 100px;
+}
+
+.container-sobre h1 {
+    height: 100px;
+    margin-top: 20px;
+    font-size: 5em;
+    text-transform: uppercase;
+    font-family: 'Bruno Ace SC';
+    color: white;
+    text-align: center;
+}
+
+.container-sobre .descricao {
+    background-color: rgba(49, 5, 70, 0.53);
+    border-radius: 20px;
+    margin-top: 50px;
+    padding: 50px;
+    height: 350px;
+}
+
+.container-sobre .descricao p{
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    /* text-transform: uppercase; */
+    letter-spacing: 4px;
+}
+
+.container-sobre .botao-acessar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.container-sobre .botao-acessar a {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    color: #24005E;
+    font-family: 'Bruno Ace SC';
+    cursor: pointer;
+}
+
+.container-camadas {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    /* background-image: linear-gradient(to right, #00014a, #281f6f); */
+}
+
+.camada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: right;
+    background-size: cover;
+}
+
+.camada:nth-child(1) {
+    background-image: url(./img/1.png);
+}
+
+.camada:nth-child(2) {
+    background-image: url(./img/2.png);
+}
+
+.camada:nth-child(3) {
+    background-image: url(./img/3.png);
+}
+
+.camada:nth-child(4) {
+    background-image: url(./img/4.png);
+}
+
+.camada:nth-child(5) {
+    background-image: url(./img/5.png);
+}
+
+.camada:nth-child(6) {
+    background-image: url(./img/6.png);
+}
+
+.camada:nth-child(7) {
+    background-image: url(./img/7.png);
+}

@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo {
+    left: 70%;
+    top: 1000px;
+    margin: 0 0 0 -250px;
+    position: absolute;
+    /* background: red; */
+    width: 500px;
+}
+
+.calendario {
+    text-align: center;
+}
+
+.conteudo .calendario header {
+    position: relative;
+}
+
+#mes {
+    margin-top: 20px;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.btn-ant,.btn-pro {
+    position: absolute;
+    top: 15%;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    margin-top: -50px; /* aqui estava dando erro */
+    border: 2px solid #cbd1d2;
+    border-radius: 50%;
+    color: #cbd1d2;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-ant {
+    left: 80px;
+}
+
+.btn-pro {
+    right: 80px;
+}
+
+.btn-ant:hover,.btn-pro:hover {
+    background: #cbd1d2;
+    color: #f9f9f9;
+}
+
+.calendario table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.calendario thead {
+    font-weight: 600;
+    text-transform: uppercase;
+    background: white;
+    border-top: 4px solid rgb(82, 40, 107);
+    border-bottom: 4px solid rgb(82, 40, 107);
+}
+
+.calendario thead td{
+    height: 69.4px;
+}
+
+.calendario thead td:first-child{
+    border-left: 4px solid rgb(82, 40, 107);
+}
+
+.calendario thead td:last-child{
+    border-right: 4px solid rgb(82, 40, 107);
+}
+
+.calendario td {
+    border: 0.5px solid #cbd1d2;
+    height: 71.4px;
+    text-align: center;
+    width: 71.4px;
+}
+
+.calendario tbody td {
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+}
+
+.calendario tbody td:hover {
+    background: rgb(82, 40, 107);
+}
+
+.calendario table .dia-atual {
+    background: rgb(82, 40, 107);
+    transition: 1s;
+}
+
+.calendario .mes-anterior, .calendario .proximo-mes {
+    color: #9b9999;
+}
+
+.calendario .mes-anterior:hover, .calendario .proximo-mes:hover {
+    background: rgb(29, 10, 41);
+}
+
+.event {
+    position: relative;
+}
+
+.event::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    left: 50%;
+    bottom: 7px;
+    margin: -3.5px 0 0 -3.5px;
+    background: rgb(82, 40, 107);
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.event:hover::after {
+    background: rgb(29, 10, 41);
+}
+
+.event-dia-atual::after {
+    background: rgb(29, 10, 41);
+}
