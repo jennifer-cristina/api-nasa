@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./section-cadastro/style.css">
     <link rel="stylesheet" href="./section-cadastro/calendario.css">
     <link rel="stylesheet" href="./section-resultado/style.css">
-    <script src="./main.js" defer></script>
+    <script src="./js/efeito-menu.js" defer></script>
     <script src="./section-cadastro/calendario.js" defer></script>
+    <script src="js/consumindo-api.js" defer></script>
     <title>PLANETARIO</title>
 </head>
 
@@ -37,7 +38,7 @@
         </div>
     </section>
 
-    <section id="cadastro">
+    <section id="cadastro" class="my-S">
         <div class="container-cadastro">
             <h2>Descobrir</h2>
             <div class="container-cadastro-pessoa">
@@ -46,9 +47,15 @@
                     <input type="text" value="jennifer">
                     <span>Seu aniversário é uma data unica e muito importante, Então vamos lá!
                         Insira sua data de nascimento.</span>
-                    <div class="calendario">
-                        <input type="date">
+                    <!-- <div id="date-picker" class="calendario">
+                        <input id="wrapper-date" type="date" value="">
+                    </div> -->
+
+                    <div class="form-outline datepicker mb-4">
+                        <input type="date" class="form-control", id="exampleDatepicker1" data-mdb-toggle="datepicker">
+                        <!-- <label for="exampleDatepicker1" class="from-label">Selecione a data de nascimento</label> -->
                     </div>
+
                     <div class="botao-acessar">
                         <a href="#resultado">Descobrir</a>
                     </div>
@@ -130,7 +137,28 @@
 
     <section id="resultado">
         <div class="container-resultado">
-            <h2>Resultado</h2>
+            <div class="row">
+
+                <div class="col-md-8 mb-4 mb-md-0">
+
+                    
+                    <section id="wrapper-media" class="">
+
+
+                    </section>
+
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-0">
+
+                    <h5 id="wrapper-title"></h5>
+                    <p class="mb-2 text-muted" >Descrição: <span id="wrapper-explanation"></span> </p>
+                    
+
+                </div>
+
+            </div>
+            <!-- <h2>Resultado</h2> -->
         </div>
     </section>
 </body>

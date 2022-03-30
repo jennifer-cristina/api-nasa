@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Bruno Ace SC';
-    src: url('./fonts/Bruno\ Ace\ SC\ Regular.ttf') format('truetype');
+    src: url('../fonts/Bruno\ Ace\ SC\ Regular.ttf') format('truetype');
   }
 
 * {
@@ -16,7 +16,7 @@ body {
 
 #menu-principal {
     display: flex;
-    background-image: url(./img/background.png);
+    background-image: url(../img/background.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -66,6 +66,9 @@ body {
     width: 300px;
     height: 50px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5em;
     background-color: white;
     text-align: center;
@@ -94,29 +97,29 @@ body {
 }
 
 .camada:nth-child(1) {
-    background-image: url(./img/1.png);
+    background-image: url(../img/1.png);
 }
 
 .camada:nth-child(2) {
-    background-image: url(./img/2.png);
+    background-image: url(../img/2.png);
 }
 
 .camada:nth-child(3) {
-    background-image: url(./img/3.png);
+    background-image: url(../img/3.png);
 }
 
 .camada:nth-child(4) {
-    background-image: url(./img/4.png);
+    background-image: url(../img/4.png);
 }
 
 .camada:nth-child(5) {
-    background-image: url(./img/5.png);
+    background-image: url(../img/5.png);
 }
 
 .camada:nth-child(6) {
-    background-image: url(./img/6.png);
+    background-image: url(../img/6.png);
 }
 
 .camada:nth-child(7) {
-    background-image: url(./img/7.png);
+    background-image: url(../img/7.png);
 }
