@@ -47,10 +47,10 @@ function nasaRequest() {
     }
 
     // Colocando a url e a chave em variáveis e atribuindo a uma variável para consulta completa
-    let datepicker_date = document.getElementById("wrapper-date").value;
+    let data = document.getElementById("date").value;
     let consultaUrl = "https://api.nasa.gov/planetary/apod?";
     let consultaChave = "api_key=bqBIWfjCzYO6ZcubPhT7ICbgmhaX4PgBjuC3rCS7&";
-    let consultaData = "date=" + datepicker_date + "&";
+    let consultaData = "date=" + data + "&";
 
     let consultaCompleta = consultaUrl + consultaChave + consultaData;
 
@@ -58,9 +58,11 @@ function nasaRequest() {
     xmlhttp.send();
 }
 
-var controleData = document.getElementById("date-picker");
-controleData.addEventListener("dateChange.mdb.datepicker", (e) => {
+const descobrir = document.getElementById("botao-acessar");
+descobrir.addEventListener('click', (e) => {
     nasaRequest();
 });
 
 nasaRequest().onload;
+
+

@@ -123,3 +123,21 @@ body {
 .camada:nth-child(7) {
     background-image: url(../img/7.png);
 }
+
+@media (max-width: 600px){
+
+    body {
+        width: 100%;
+        min-height: 500px;
+    }
+
+    .container-sobre {
+        width: 300px;
+        height: 700px;
+        margin-top: 80px;
+        margin-left: 100px;
+        /* background-color: yellowgreen; */
+    } 
+
+    
+}

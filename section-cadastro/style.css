@@ -60,7 +60,7 @@
     font-family: 'Bruno Ace SC';
 }
 
-.container-cadastro-pessoa .registro input {
+.container-cadastro-pessoa .registro .nome {
     width: 400px;
     height: 50px;
     border-radius: 10px;
@@ -70,7 +70,7 @@
     text-transform: uppercase;
 }
 
-.container-cadastro-pessoa .registro .botao-acessar a {
+.container-cadastro-pessoa .registro #botao-acessar a {
     width: 300px;
     height: 50px;
     border-radius: 10px;
@@ -97,7 +97,7 @@
     font-family: 'Bruno Ace SC';
 }
 
-.container-cadastro-pessoa .registro .calendario input {
+.container-cadastro-pessoa .registro .calendario #date {
     width: 400px;
     height: 50px;
     border-radius: 10px;
