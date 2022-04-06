@@ -107,3 +107,108 @@
     text-align: center;
     text-transform: uppercase;
 }
+
+@media (max-width: 600px){
+
+    #cadastro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 850px;
+        background-color: rgb(42, 21, 54);
+        overflow: hidden;
+    }
+    
+    
+    .container-cadastro {
+        width: 90%;
+        height: 90%;
+        background-color: rgba(0, 0, 0, 0.61);
+    }
+    
+    .container-cadastro h2 {
+        width: 100%;
+        height: 15%;
+        font-size: 2.5em;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-family: 'Bruno Ace SC';
+        color: white;
+        text-align: center;
+    }
+    
+    .container-cadastro-pessoa {    
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    .container-cadastro-pessoa .registro {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    .container-cadastro-pessoa .registro p {
+        font-size: 1.5em;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Bruno Ace SC';
+    }
+    
+    .container-cadastro-pessoa .registro .nome {
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+        margin-top: 30px;
+        font-size: 1.5em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .container-cadastro-pessoa .registro #botao-acessar a {
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: white;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #24005E;
+        font-family: 'Bruno Ace SC';
+    }
+    
+    .container-cadastro-pessoa .registro span {
+        width: 300px;
+        height: 300px;
+        margin-top: 60px;
+        font-size: 1.5em;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Bruno Ace SC';
+    }
+    
+    .container-cadastro-pessoa .registro .calendario #date {
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+        font-size: 1.5em;
+        margin-top: -20px;
+        margin-bottom: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

@@ -74,3 +74,78 @@
     height: 100%;
     padding: 10px;
 }
+
+@media (max-width: 600px){
+
+    #resultado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 850px;
+        background-color: rgb(42, 21, 54);
+        color: white;
+    }
+    
+    .container-resultado {
+        width: 90%;
+        height: 90%;
+        background-color: rgba(0, 0, 0, 0.61);
+    }
+    
+    .row {
+        width: 350px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-color: aqua; */
+    }
+    
+    .row .container-imagem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40%;
+        /* background-color: yellow; */
+    }
+    
+    .row .container-informacao-imagem {
+        width: 300px;
+        height: 60%;
+        /* background-color: violet; */
+    }
+    
+    .row .container-informacao-imagem h5 {
+        font-size: 1em;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        margin-top: 10px;
+        padding: 20px;
+        font-family: 'Bruno Ace SC';
+    }
+    
+    .row .container-informacao-imagem p {
+        margin-top: 5px;
+        padding: 20px;
+        font-size: 10px;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Poppins';
+    }
+    
+    .row .container-imagem .imagem .bg-image {
+        width: 300px;
+        height: 300px;
+        /* background-color: yellowgreen; */
+    }
+    
+    .row .container-imagem .imagem .bg-image img {
+        width: 300px;
+        height: 300px;
+    }
+}
