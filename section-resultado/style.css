@@ -40,6 +40,7 @@
 .row .container-informacao-imagem {
     width: 50%;
     height: 100%;
+    overflow: auto;
     /* background-color: violet; */
 }
 
@@ -59,8 +60,8 @@
     font-size: 1.5em;
     text-align: center;
     color: white;
-    text-transform: uppercase;
     font-family: 'Poppins';
+    
 }
 
 .row .container-imagem .imagem .bg-image {
@@ -100,7 +101,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* background-color: aqua; */
     }
     
     .row .container-imagem {
@@ -109,17 +109,16 @@
         justify-content: center;
         width: 100%;
         height: 40%;
-        /* background-color: yellow; */
     }
     
     .row .container-informacao-imagem {
         width: 300px;
         height: 60%;
-        /* background-color: violet; */
+        overflow: auto;
     }
     
     .row .container-informacao-imagem h5 {
-        font-size: 1em;
+        font-size: 1.5em;
         text-align: center;
         color: white;
         text-transform: uppercase;
@@ -131,16 +130,16 @@
     .row .container-informacao-imagem p {
         margin-top: 5px;
         padding: 20px;
-        font-size: 10px;
+        font-size: 1rem;
         text-align: center;
         color: white;
-        text-transform: uppercase;
         font-family: 'Poppins';
+        
     }
     
     .row .container-imagem .imagem .bg-image {
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 50%;
         /* background-color: yellowgreen; */
     }
     
