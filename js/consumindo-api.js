@@ -8,6 +8,8 @@ function nasaRequest() {
 
     // No caso onreadystatechange, especificamos o que acontecerá quando a resposta do servidor está pronto para ser processado.
     xmlhttp.onreadystatechange = function () {
+        // O método status retorna um código de status numérico da resposta do XMLHttpRequest. 200 denota uma solicitação bem-sucedida.
+        // O método readyState retorna o estado em que um cliente XMLHttpRequest está. 4 indica que a operação foi concluída.
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
 
@@ -15,7 +17,6 @@ function nasaRequest() {
             let date = data["date"];
             let explanation = data["explanation"];
             let media_type = data["media_type"];
-            let service_version = data["service_version"];
             let title = data["title"];
             let url = data["url"];
 
@@ -64,5 +65,7 @@ descobrir.addEventListener('click', (e) => {
 });
 
 nasaRequest().onload;
+
+
 
 
