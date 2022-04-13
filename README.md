@@ -11,9 +11,11 @@
  - :trophy: Foi utilizada a API APOD
  - :trophy: A chamada APOD retorna um objeto JSON contendo uma imagem ou vídeo, data, explicação e metadados adicionais.
  - :trophy: O APOD usa um método de solicitação GET HTTP para buscar os dados do servidor da NASA.
+ - :warning: A API Fornece dados apenas a partir do ano de 1995.
  - :globe_with_meridians: https://api.nasa.gov/planetary/apod
 
 ## Linguagens :books:
  - HTML
  - CSS
  - JAVASCRIPT
+
