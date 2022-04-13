@@ -1,71 +1,85 @@
 'use strict'
 
-// Consumindo a API
+// Buscando os dados da api
+const buscar = async () => {
+    const data = document.getElementById("date").value;
+    const consultaUrl = "https://api.nasa.gov/planetary/apod?";
+    const consultaChave = "api_key=bqBIWfjCzYO6ZcubPhT7ICbgmhaX4PgBjuC3rCS7&";
+    const consultaData = "date=" + data + "&";
 
-function nasaRequest() {
-    // fazendo o request da url
-    let xmlhttp = new XMLHttpRequest();
+    const consultaCompleta = consultaUrl + consultaChave + consultaData;
+    console.log(consultaCompleta)
 
-    // No caso onreadystatechange, especificamos o que acontecerá quando a resposta do servidor está pronto para ser processado.
-    xmlhttp.onreadystatechange = function () {
-        // O método status retorna um código de status numérico da resposta do XMLHttpRequest. 200 denota uma solicitação bem-sucedida.
-        // O método readyState retorna o estado em que um cliente XMLHttpRequest está. 4 indica que a operação foi concluída.
-        if (this.readyState == 4 && this.status == 200) {
-            let data = JSON.parse(this.responseText);
+    const resposta = await fetch(consultaCompleta);
 
-            // Pegando dados de cada json(array) pelo seu tipo
-            let date = data["date"];
-            let explanation = data["explanation"];
-            let media_type = data["media_type"];
-            let title = data["title"];
-            let url = data["url"];
+    const dados = await resposta.json();
 
-            let imageType = ` <div class="bg-image">
-                            <img id="wrapper-image" src="" class="w-100" alt="">
-                          </div>
-                          `;
+    console.log(resposta)
 
-            let videoType = ` <div class="ratio ratio-16x9">
+    return dados;
+}
+
+// Carregando os dados da api e colocando no container resultado
+const carregarDados = async () => {
+
+    const container = document.querySelector('.container-resultado')
+    const dadosBusca = await buscar()
+    const card = criarCard(dadosBusca)
+    console.log(dadosBusca)
+    container.replaceChildren(card)
+
+}
+
+// Criando o card
+const criarCard = (data) => {
+
+    const containerMedia = definirTipoMedia(data)
+    const content = document.createElement('div')
+    content.classList.add('content')
+    content.innerHTML = `
+
+                <div class="container-imagem">
+
+                    <section id="wrapper-media" class="imagem">
+                    ${containerMedia}
+                    </section>
+
+                </div>
+
+                <div class="container-informacao-imagem">
+
+                    <h5 id="wrapper-title">${data.title}</h5>
+                    <p class="mb-2 text-muted" ><span id="wrapper-explanation">${data.explanation}</span> </p>
+
+                </div>
+    `
+
+    return content
+}
+
+// validar qual chegará, se for imagem ou video
+const definirTipoMedia = (data) => {
+
+    let containerMedia = ""
+    // validando se for video ou imagem, adicionando eles em um container novo
+    if (data.media_type === "video") {
+        containerMedia = `
+        <div class="ratio ratio-16x9">
                             <iframe id="wrapper-video" 
-                            src=""
+                            src="${data.url}"
                             title="Youtube video" allowfullscreen"></iframe>
                           </div>
-                        `;
-
-            // chamando e colocando-os nas divs
-            document.getElementById("wrapper-title").innerHTML = title;
-            document.getElementById("wrapper-explanation").innerHTML = explanation;
-
-            // validando se for video ou imagem, adicionando eles em um container novo
-            if (media_type === "video") {
-                document.getElementById("wrapper-media").innerHTML = videoType;
-                document.getElementById("wrapper-video").src = url;
-            } else {
-                document.getElementById("wrapper-media").innerHTML = imageType;
-                document.getElementById("wrapper-image").src = url;
-            }
-        }
+        `
+    } else {
+        containerMedia = 
+        `<div class="bg-image">
+                            <img id="wrapper-image" src="${data.url}" class="w-100" alt="">
+                          </div>
+                          `
     }
 
-    // Colocando a url e a chave em variáveis e atribuindo a uma variável para consulta completa
-    let data = document.getElementById("date").value;
-    let consultaUrl = "https://api.nasa.gov/planetary/apod?";
-    let consultaChave = "api_key=bqBIWfjCzYO6ZcubPhT7ICbgmhaX4PgBjuC3rCS7&";
-    let consultaData = "date=" + data + "&";
-
-    let consultaCompleta = consultaUrl + consultaChave + consultaData;
-
-    xmlhttp.open("GET", consultaCompleta, true);
-    xmlhttp.send();
+    return containerMedia
 }
 
 const descobrir = document.getElementById("botao-acessar");
-descobrir.addEventListener('click', (e) => {
-    nasaRequest();
-});
-
-nasaRequest().onload;
-
-
-
-
+descobrir.addEventListener('click', carregarDados );

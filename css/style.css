@@ -104,7 +104,7 @@ body {
 }
 
 .camada:nth-child(1) {
-    background-image: url(../img/1.png);
+    background-image: url(../img/0.png);
 }
 
 .camada:nth-child(2) {
